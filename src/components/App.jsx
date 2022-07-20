@@ -35,7 +35,7 @@ export default class App extends Component {
           <Feedbacks buttonIncrement={this.buttonIncrement}></Feedbacks>
         </Section>
         <Section title='Review Statistic'>
-          {total === 0 ? (<Notification notice="No feedback was given" />) : (
+          {total === 0 ? (<Notification message="No feedback was given" />) : (
               <Statistic
                 good={good}
                 neutral={neutral}
