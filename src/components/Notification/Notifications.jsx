@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import styles from '../Notification/Notifications.module.css'; 
 
-// eslint-disable-next-line
-export default Notification = ({ message }) => {
+
+const Notification = ({ message }) => {
     return (
         <p className={styles.p}>{message}</p>
     )
@@ -11,3 +11,4 @@ export default Notification = ({ message }) => {
 Notification.propTypes = {
     message:PropTypes.string.isRequired,
 }
+export default Notification
