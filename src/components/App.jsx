@@ -13,8 +13,10 @@ export default class App extends Component {
 
   };
   buttonIncrement = event => {
+    const { name } = event.target;
     this.setState(prevState => ({
-      [event.target.name]: prevState[event.target.name] + 1,
+      
+      [name]: prevState[name] + 1,
     }));
   };
 
@@ -32,7 +34,8 @@ export default class App extends Component {
     return (
       <section>
         <Section title='Please leave us a feedback'>
-          <Feedbacks buttonIncrement={this.buttonIncrement}></Feedbacks>
+          <Feedbacks options={Object.keys(this.state)}
+            buttonIncrement={this.buttonIncrement}></Feedbacks>
         </Section>
         <Section title='Review Statistic'>
           {total === 0 ? (<Notification message="No feedback was given" />) : (
